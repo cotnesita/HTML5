@@ -21,12 +21,15 @@ Es decir, HTML5 es compatible con HTML4. Las aplicaciones web creadas con HTML4 
 La actualización a HTML5 puede ser tan simple como cambiar el doctype en la primera línea de una página HTML. Esto no rompe el código antiguo, pero habilita el uso de nuevos elementos semánticos como `<article>`, `<header>`, `<footer>`, `<section>`.
 
 Cabe añadir, HTML5 solo maneja un tipo de estructura: 
-`<!DOCTYPE html>`
-`<html lang="en">`
-`<head>`
-`<title›HTML5: Arriba y Running</title></head> <body>`
 
-<h3 style="color:#b0f5ab">5. Está aquí para quedarse</h3>
+`<!DOCTYPE html>` <br>
+`<html lang="en">` <br>
+`<head>` <br>
+    `<title›HTML5: Arriba y Running</title>` <br>
+`</head>` <br>
+`<body>`
+
+<h3 style="color:#b0f5ab">4. Está aquí para quedarse</h3>
 
 Tim Berners-Lee inventó la World Wide Web a principios de la década de 1990. Más tarde fundó el W3C para actuar como administrador de los estándares web, lo que la organización ha hecho durante más de 15 años. Esto es lo que el W3C tenía que decir sobre el futuro de los estándares web, en julio de 2009:
 
