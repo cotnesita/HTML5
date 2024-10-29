@@ -11,7 +11,7 @@ El documento presenta cuatro técnicas básicas para detectar si un navegador ad
 #### Técnica 1: Verificar Propiedades Globales 
 Consiste en comprobar si una propiedad existe en un objeto global, como window o navigator.
 **Ejemplo para detectar la API de geolocalización:**
-```
+```javascript
 if ('geolocation' in navigator) {
   *// La geolocalización es compatible*
 }
@@ -19,7 +19,7 @@ if ('geolocation' in navigator) {
 #### Técnica 2: Crear un Elemento y Verificar una Propiedad 
 Se crea un elemento y se verifica si tiene una propiedad específica. Esto se utiliza, por ejemplo, para verificar la compatibilidad con la API de Canvas.
 **Ejemplo para Canvas:**
-```
+```javascript
 function supports_canvas() {
   return !!document.createElement('canvas').getContext;
 }
@@ -27,7 +27,7 @@ function supports_canvas() {
 #### Técnica 3: Crear un Elemento, Llamar a un Método y Comprobar el Valor Devuelto 
 Se utiliza para verificar formatos de vídeo soportados.
 **Ejemplo para H.264:**
-```
+```javascript
 function supports_h264_baseline_video() {
   var v = document.createElement('video');
   return v.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
@@ -36,7 +36,7 @@ function supports_h264_baseline_video() {
 #### Técnica 4: Crear un Elemento, Establecer una Propiedad y Verificar si Conserva el Valor
 Se utiliza para detectar nuevos tipos de <input>.
 **Ejemplo para el tipo color:**
-```
+```javascript
 var i = document.createElement('input');
 i.setAttribute('type', 'color');
 return i.type !== 'text';
@@ -45,7 +45,7 @@ return i.type !== 'text';
 Modernizr es una herramienta que permite verificar automáticamente si las funciones de HTML5 están disponibles. Esta biblioteca simplifica mucho el trabajo del desarrollador, ya que evita tener que escribir código manual para cada prueba.
 
 **Ejemplo de uso de Modernizr para Canvas:**
-```
+```javascript
 if (Modernizr.canvas) {
   // El navegador soporta Canvas
 } else {
@@ -58,7 +58,7 @@ Modernizr crea un objeto global llamado `Modernizr` que contiene propiedades boo
 Para detectar qué formatos de vídeo soporta un navegador, se usa la técnica 3 con el método canPlayType.
 
 **Ejemplo para detectar soporte de Ogg Theora:**
-```
+```javascript
 function supports_ogg_theora_video() {
   var v = document.createElement('video');
   return v.canPlayType('video/ogg; codecs="theora, vorbis"');
@@ -69,7 +69,7 @@ function supports_ogg_theora_video() {
 HTML5 introduce nuevos tipos de `<input>` como `color`, `email`, `url`, entre otros. Para verificar la compatibilidad de estos nuevos tipos, se utiliza la técnica 4.
 
 **Ejemplo para comprobar el soporte de** `<input type="date">`:
-```
+```javascript
 if (!Modernizr.inputtypes.date) {
   // El navegador no soporta nativamente <input type="date">
 }
@@ -79,8 +79,9 @@ if (!Modernizr.inputtypes.date) {
 HTML5 permite definir texto de marcador de posición en los campos de formulario. Para detectar si un navegador admite esta funcionalidad, se verifica la existencia de la propiedad `placeholder` en un elemento `<input>`.
 
 **Ejemplo para detectar soporte de** `placeholder`:
-```
+```javascript
 function supports_input_placeholder() {
   var i = document.createElement('input');
   return 'placeholder' in i;
 }
+```
