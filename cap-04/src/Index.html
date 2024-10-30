@@ -12,29 +12,29 @@
             border: 0;
         }
         canvas {
-            height: 225px;
-            width: 300px;
-            border: 1px solid black;
+            height: 200;
+            width: 350px;
+            border: 2px solid black;
         }
             
         #canva_1 {
-            border: 2px dotted blue;
+            border: 2px dotted purple;
         }
         .simple {
-            background: lightgray;
+            background: #d2d3fa;
         }
         .paths {
             background: whitesmoke;
         }
         .textos {
-            background-color: azure;
+            background-color: #d2fad7;
            
         }
         .gradientes {
-            background: linear-gradient(90deg , green , white ,brown, white , red);
+            background: linear-gradient(90deg , purple , orange ,blue, yellow , #b130d1);
         }
         .imagenes {
-            background-color: burlywood;
+            background-color: pink;
         }
         #img_imge {
             display: none;
@@ -189,7 +189,7 @@
                 <img 
                      width="100" 
                      height="100" 
-                     src="imagenes/ejemplo.jpg" 
+                     src="IMAGENES/DIA DE MUERTOS.jpg" 
                      id="imge"
                 >
                 <canvas 
@@ -250,7 +250,7 @@
                     var conva= document.getElementById("img_imge");
                     var conva1=conva.getContext("2d");
                     var bwu=new Image();
-                    bwu.src="imagenes/ejemplo.jpg"
+                    bwu.src="IMAGENES/DIA DE MUERTOS.jpg"
                     bwu.onload= function b(){
                         cox.drawImage(bwu , 100, 25 ,100 ,100);        
                         cox.drawImage(bwu , 100, 25 ,100 ,100);        
