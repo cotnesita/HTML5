@@ -96,4 +96,4 @@ El método `drawImage()` permite insertar imágenes dentro del lienzo, pudiendo 
 
 <h3 style="color:#caff91">7. ¿Qué pasa con IE?</h3>
 
-
+En versiones anteriores a IE 9, `<canvas>` no funciona directamente. Para solucionar esto, se puede usar la biblioteca *excanvas.js*, que permite que `<canvas>` funcione en IE antiguo. Simplemente agregas esta biblioteca en el `<head>` del HTML, y el navegador la carga solo si es necesario. Algunas limitaciones con *excanvas.js* en IE son que solo admite gradientes lineales y que el rendimiento es más lento.
