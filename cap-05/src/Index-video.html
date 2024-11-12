@@ -1,1 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor de Video</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background-color: #271902;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+/* Barra de navegación superior */
+.navbar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.url-bar {
+  flex: 1;
+  background-color: #444;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 15px;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.navbar-icons span {
+  cursor: pointer;
+}
+
+/* Estilo del reproductor de video */
+.video-player {
+  flex: 3;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+  position: relative;
+  top: 50px;
+}
+
+.video-player video {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.video-info {
+  padding: 15px;
+  background-color: #444;
+  text-align: left;
+}
+
+.video-info h2 {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.video-info p {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Estilo de la barra lateral */
+.sidebar {
+  flex: 1;
+  background-color: #222;
+  border-radius: 10px;
+  top: 50px;
+  position: relative;
+}
+
+.tab-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background-color: #555;
+}
+
+.suggestions {
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* Estilo de los videos sugeridos */
+.suggestion {
+  display: flex;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.suggestion img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.suggestion-info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.suggestion-info h3 {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.suggestion-info p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Scroll personalizado para la barra lateral */
+.suggestions::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .video-player, .sidebar {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar {
+    width: 90%;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Barra de navegación superior -->
+    <div class="navbar">
+      <input type="text" class="url-bar" placeholder="https://www.tuplayer.com">
+      <div class="navbar-icons">
+        <span>🔄</span>
+        <span>🔄</span>
+        <span>⚙️</span>
+      </div>
+    </div>
+
+    <!-- Reproductor de video principal -->
+    <div class="video-player">
+      <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls></video>
+      <div class="video-info">
+        <h2>Big Buck Bunnny</h2>
+        <p>Ejemplo de Video</p>
+      </div>
+    </div>
+
+    <!-- Barra lateral de videos sugeridos -->
+    <div class="sidebar">
+      <div class="tab-options">
+        <button class="tab-btn active">Watch Next</button>
+        <button class="tab-btn">Trending</button>
+        <button class="tab-btn">Recommended</button>
+      </div>
+      <div class="suggestions">
+        <!-- Ejemplo de videos sugeridos -->
+        <div class="suggestion">
+          <img src="imagen1.jpg" alt="Video 1">
+          <div class="suggestion-info">
+            <h3>War in Ukraine and what it means for the world...</h3>
+            <p>5.8M views | Mar 2022</p>
+          </div>
+        </div>
+        <div class="suggestion">
+          <img src="imagen2.jpg" alt="Video 2">
+          <div class="suggestion-info">
+            <h3>How AR can make us feel more connected to the...</h3>
+            <p>3.1M views | Jan 2018</p>
+          </div>
+        </div>
+        <!-- Agrega más videos suger
