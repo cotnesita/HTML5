@@ -1,7 +1,7 @@
 <center> <h1>Capítulo 6: ESTÁS AQUÍ (Y TODOS LOS DEMÁS LO SON TODOS)</h1></center>
 
 ## Introducción
-El capítulo 6 llamado "ESTÁS AQUÍ (Y TODOS LOS DEMÁS LO SON TODOS)" describe en profundidad el uso del elemento `<canvas>` en HTML5, que funciona como un "lienzo" para gráficos, imágenes y otros elementos visuales generados a través de JavaScript. Este lienzo permite crear y manipular gráficos de forma dinámica, ideal para juegos, diagramas y visualizaciones interactivas. Canvas, en esencia, es una superficie de dibujo en la que los desarrolladores pueden plasmar gráficos y modificar la presentación del contenido visual en tiempo real.
+El capítulo 6 llamado "ESTÁS AQUÍ (Y TODOS LOS DEMÁS LO SON TODOS)" explica cómo usar la API de geolocalización en HTML5, que permite a las aplicaciones web saber dónde está el usuario, siempre y cuando este acepte compartir su ubicación. A través de ejemplos y pasos sencillos, se muestra cómo hacer que una página web detecte la ubicación, cómo manejar posibles errores y cómo hacer que funcione en dispositivos y navegadores más antiguos.
 
 ## Desarrollo
 
