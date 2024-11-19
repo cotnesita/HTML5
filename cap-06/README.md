@@ -1,99 +1,122 @@
-<center> <h1>Capítulo 6: ESTÁS AQUÍ (Y TODOS LOS DEMÁS LO SON TODOS)</h1></center>
+<center> <h1>Capítulo 6: Estás aquí (y todos los demás también)</h1>h1></center>
 
 ## Introducción
-El capítulo 6 llamado "ESTÁS AQUÍ (Y TODOS LOS DEMÁS LO SON TODOS)" explica cómo usar la API de geolocalización en HTML5, que permite a las aplicaciones web saber dónde está el usuario, siempre y cuando este acepte compartir su ubicación. A través de ejemplos y pasos sencillos, se muestra cómo hacer que una página web detecte la ubicación, cómo manejar posibles errores y cómo hacer que funcione en dispositivos y navegadores más antiguos.
+El capítulo 6 llamado "Estás aquí (y todos los demás tambián)" explica cómo usar la API de geolocalización en HTML5, que permite a las aplicaciones web saber dónde está el usuario, siempre y cuando este acepte compartir su ubicación. A través de ejemplos y pasos sencillos, se muestra cómo hacer que una página web detecte la ubicación, cómo manejar posibles errores y cómo hacer que funcione en dispositivos y navegadores más antiguos.
 
 ## Desarrollo
 
-<h3 style="color:lightblue">0. Canvas</h3>
+<h3 style="color:lightblue">0.¿Qué es la geolocalización?</h3>
 
-`<canva>` crea un área rectangular donde se puede dibujar utilizando JavaScript. No tiene contenido visible hasta que se le agregan gráficos.
+La geolocalización es la capacidad de determinar dónde estás físicamente en el mundo y compartir esa ubicación con otros. Se basa en tecnologías como GPS, torres de telefonía móvil, conexiones Wi-Fi y direcciones IP.
 
-**Ejemplo básico para definir un canvas:**
-```html
-<canvas id="miCanvas" width="300" height="225"></canvas>
-```
+<h3 style="color:lightpink">1. La API de Geolocalización</h3>
 
-JavaScript permite seleccionar el elemento y obtener el contexto de dibujo:
+La API de geolocalización permite a las páginas web acceder a la ubicación física de los usuarios (latitud y longitud) mediante JavaScript. Se utiliza para mostrar mapas, encontrar negocios cercanos, entre otros.
 
-```javascript
-var canvas = document.getElementById("miCanvas");
-var contexto = canvas.getContext("2d");
-```
+<h3 style="color:#f5e1ab">2. Muéstrame el código</h3>
 
-<h3 style="color:lightpink">1. Formas simples</h3>
+Para acceder a la ubicación, se utiliza la propiedad `navigator.geolocation`. 
 
-Para dibujar rectángulos, se usa `fillRect(x, y, width, height)` para dibujar rectángulos rellenos o `strokeRect(x, y, width, height)`  para solo trazar el borde.
-
-**Un ejemplo básico sería:**
+#### Un ejemplo básico sería:
 
 ```javascript
-var canvas = document.getElementById("myCanvas");
-var context = canvas.getContext("2d");
-context.fillRect(50, 25, 150, 100); // Dibuja un rectángulo relleno
+function get_location() {
+  navigator.geolocation.getCurrentPosition(show_map);
+}
+function show_map(position) {
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+  console.log(`Latitud: ${latitude}, Longitud: ${longitude}`);
+}
 ```
+Este código solicita la ubicación y la muestra en consola.
 
-<h3 style="color:#f5e1ab">2. Coordenadas del lienzo</h3>
-
-El sistema de coordenadas inicia en la esquina superior izquierda `(0,0)`. A medida que los valores aumentan en X, se mueven hacia la derecha, y en Y, hacia abajo. Esto permite especificar la ubicación exacta de cada figura y personalizar su diseño según se necesite.
-
-<h3 style="color:#b0f5ab">3. Caminos</h3>
-
-Las líneas se crean usando `moveTo` (mover el "lápiz" sin dibujar) y `lineTo` (dibujar hasta el punto indicado). Estas trayectorias no se muestran hasta llamar a `stroke()`, lo que "entinta" el trazo.
-
-**Por ejemplo:**
+#### Si se quiere verificar si el navegador soporta la API se utiliza:
 
 ```javascript
-contexto.beginPath();
-contexto.moveTo(0, 0);
-contexto.lineTo(300, 150);
-contexto.stroke(); // Dibuja la línea
+if ('geolocation' in navigator) {
+  console.log('Geolocalización soportada');
+} else {
+  console.log('No soportada');
+}
 ```
 
-<h3 style="color:#b0f5ab">4. Texto</h3>
+<h3 style="color:#b0f5ab">3. Manejo de errores</h3>
+Cuando algo falla al obtener la ubicación, puedes manejar errores con una función de devolución. 
 
-El elemento `<canvas>` también soporta texto, permitiendo agregar texto en distintas posiciones y con diferentes estilos, aunque sin el modelo de caja de CSS. Esto se logra ajustando propiedades como `font`, `textAlign`, y `textBaseline`. Se puede dibujar texto con `fillText` o `strokeText`.
-
-**Ejemplo:**
+#### Ejemplo:
 
 ```javascript
-contexto.font = "20px Arial";
-contexto.fillText("Hola, Canvas!", 50, 50);
+navigator.geolocation.getCurrentPosition(
+  show_map,
+  handle_error
+);
 ```
 
-<h3 style="color:#b0f5ab">5. Gradientes</h3>
+<h3 style="color:#b0f5ab">4. ¡Opciones! ¡Exijo opciones!</h3>
 
-Los gradientes permiten transiciones de color suaves. Se crean con `createLinearGradient` o `createRadialGradient`.
+Puedes configurar opciones adicionales con `PositionOptions`:
 
-**Ejemplo:**
+- **enableHighAccuracy**: mejora la precisión, pero puede ser más lento.
+- **timeout**: tiempo máximo para esperar la ubicación.
+- **maximumAge**: permite usar ubicaciones recientes almacenadas.
+
+#### Ejermplo:
 
 ```javascript
-var gradiente = contexto.createLinearGradient(0, 0, 300, 0);
-gradiente.addColorStop(0, "black");
-gradiente.addColorStop(1, "white");
-contexto.fillStyle = gradiente;
-contexto.fillRect(0, 0, 300, 150);
+navigator.geolocation.getCurrentPosition(
+  show_map,
+  handle_error,
+  {
+    enableHighAccuracy: true,
+    timeout: 10000,
+    maximumAge: 60000
+  }
+);
 ```
 
-<h3 style="color:#dfceed">6. Imágenes</h3>
+<h3 style="color:#b0f5ab">5. ¿Qué hay de IE?</h3>
 
-El método `drawImage()` permite insertar imágenes dentro del lienzo, pudiendo también escalarlas y recortarlas. Esto resulta útil para crear efectos visuales y trabajar con iconos o sprites en aplicaciones gráficas.  La imagen puede ser un elemento `<img>` o un objeto `Image`.
+Antes de IE9, no se soportaba la API de geolocalización. Google Gears era una solución alternativa para estos casos. Además, plataformas antiguas como BlackBerry o Nokia tenían sus propias APIs específicas.
 
-**Ejemplo:**
+<h3 style="color:#dfceed">6. Geo.js al Rescate</h3>
+
+La librería `geo.js` simplifica el manejo de geolocalización, asegurando compatibilidad entre diferentes navegadores y dispositivos. 
+
+#### Configuración básica:
 
 ```javascript
-<img id="miImagen" src="imagen.png" />
-<canvas id="canvas" width="500" height="500"></canvas>
+<script src="gears_init.js"></script>
+<script src="geo.js"></script>
 <script>
-  var img = document.getElementById("miImagen");
-  var canvas = document.getElementById("canvas");
-  var contexto = canvas.getContext("2d");
-  img.onload = function() {
-    contexto.drawImage(img, 0, 0, 200, 100); // Dibuja imagen escalada
-  };
+if (geo_position_js.init()) {
+  geo_position_js.getCurrentPosition(
+    function(p) {
+      alert(`Latitud: ${p.coords.latitude}, Longitud: ${p.coords.longitude}`);
+    },
+    function() {
+      alert('No se pudo obtener la ubicación');
+    }
+  );
+}
 </script>
 ```
 
-<h3 style="color:#caff91">7. ¿Qué pasa con IE?</h3>
+<h3 style="color:#caff91">7. Un ejemplo completo y en vivo</h3>
 
-En versiones anteriores a IE 9, `<canvas>` no funciona directamente. Para solucionar esto, se puede usar la biblioteca *excanvas.js*, que permite que `<canvas>` funcione en IE antiguo. Simplemente agregas esta biblioteca en el `<head>` del HTML, y el navegador la carga solo si es necesario. Algunas limitaciones con *excanvas.js* en IE son que solo admite gradientes lineales y que el rendimiento es más lento.
+El documento proporciona un ejemplo para mostrar un mapa con Google Maps.
+
+#### Aquí una versión simplificada:
+
+```javascript
+function show_map(loc) {
+  const lat = loc.coords.latitude;
+  const lon = loc.coords.longitude;
+  console.log(`Mapa en Latitud: ${lat}, Longitud: ${lon}`);
+  // Aquí usarías una API de mapas como Google Maps para visualizar.
+}
+function show_map_error() {
+  console.log('No se pudo determinar la ubicación.');
+}
+```
+Este ejemplo utiliza la API para obtener la ubicación y mostrar un mapa interactivo.
