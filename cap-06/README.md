@@ -1,4 +1,4 @@
-<center> <h1>Capítulo 6: Estás aquí (y todos los demás también)</h1>h1></center>
+<center> <h1>Capítulo 6: Estás aquí (y todos los demás también)</h1></center>
 
 ## Introducción
 El capítulo 6 llamado "Estás aquí (y todos los demás tambián)" explica cómo usar la API de geolocalización en HTML5, que permite a las aplicaciones web saber dónde está el usuario, siempre y cuando este acepte compartir su ubicación. A través de ejemplos y pasos sencillos, se muestra cómo hacer que una página web detecte la ubicación, cómo manejar posibles errores y cómo hacer que funcione en dispositivos y navegadores más antiguos.
