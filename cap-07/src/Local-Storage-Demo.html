@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage - Varios Nombres</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #5c67f2;
+        }
+
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #saveBtn {
+            background-color: #5c67f2;
+            color: white;
+        }
+
+        #saveBtn:hover {
+            background-color: #4a55c4;
+        }
+
+        #loadBtn {
+            background-color: #2dc470;
+            color: white;
+        }
+
+        #loadBtn:hover {
+            background-color: #249a5a;
+        }
+
+        #deleteBtn {
+            background-color: #f25d5d;
+            color: white;
+        }
+
+        #deleteBtn:hover {
+            background-color: #c14444;
+        }
+
+        p#output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 16px;
+            margin: 5px 0;
+            padding: 5px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <input type="text" id="username" placeholder="Escribe tu nombre">
+    <div style="text-align: center;">
+        <button id="saveBtn">Guardar Nombre</button>
+        <button id="loadBtn">Cargar Nombre</button>
+        <button id="deleteBtn">Eliminar Nombre</button>
+    </div>
+    <p id="output"></p>
+
+    <!-- Canvas añadido -->
+    <canvas id="canvas" width="1300" height="900"></canvas>
+
+    <script>
+        // Referencias a los elementos
+        const usernameInput = document.getElementById('username');
+        const saveBtn = document.getElementById('saveBtn');
+        const loadBtn = document.getElementById('loadBtn');
+        const deleteBtn = document.getElementById('deleteBtn');
+        const output = document.getElementById('output');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Dibujar una imagen estática en el canvas
+        const img = new Image();
+        img.src = 'https://letterbox-love.co.uk/cdn/shop/articles/alisa-anton-JhxGkGgd3Sw-unsplash.jpg?v=1725457400'; // URL de tu imagen estática
+        img.onload = () => {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+
+        // Guardar en Local Storage
+        saveBtn.addEventListener('click', () => {
+            const username = usernameInput.value;
+            if (username) {
+                localStorage.setItem('username', username);
+                output.textContent = `¡Nombre "${username}" guardado!`;
+            } else {
+                output.textContent = 'Por favor, escribe un nombre antes de guardar.';
+            }
+        });
+
+        // Cargar desde Local Storage
+        loadBtn.addEventListener('click', () => {
+            const username = localStorage.getItem('username');
+            if (username) {
+                output.textContent = `Nombre guardado: "${username}"`;
+            } else {
+                output.textContent = 'No hay un nombre guardado.';
+            }
+        });
+
+        // Eliminar de Local Storage
+        deleteBtn.addEventListener('click', () => {
+            localStorage.removeItem('username');
+            output.textContent = 'Nombre eliminado del almacenamiento.';
+        });
+    </script>
+</body>
+</html>
+
