@@ -1,7 +1,7 @@
-<center> <h1>Capítulo 7: Vamos a dejar esto de lado</h1></center>
+<center> <h1>Capítulo 8: Vamos a dejar esto de lado</h1></center>
 
 ## Introducción
-El capítulo 7 llamado "Vamos a dejar esto de lado" explora en detalle cómo funcionan las aplicaciones web sin conexión, desde la configuración del archivo de manifiesto hasta el manejo de eventos y las mejores prácticas para depuración. También incluye ejemplos prácticos para facilitar su implementación. Si alguna vez te has preguntado cómo crear aplicaciones que no dependan totalmente de la conexión en tiempo real, esta guía es el punto de partida ideal.
+El capítulo 8 llamado "Vamos a dejar esto de lado" explora en detalle cómo funcionan las aplicaciones web sin conexión, desde la configuración del archivo de manifiesto hasta el manejo de eventos y las mejores prácticas para depuración. También incluye ejemplos prácticos para facilitar su implementación. Si alguna vez te has preguntado cómo crear aplicaciones que no dependan totalmente de la conexión en tiempo real, esta guía es el punto de partida ideal.
 
 ## Desarrollo
 
