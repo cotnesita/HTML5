@@ -1,1 +1,1 @@
-# HTML5
+El repositorio a continuación explorará y brindará resúmenes acerca de el libro titulado "HTML5", de los cuales se elaboraron ejemplos funcionales previamente revisados y probados para una visualización gráfica y al mismo tempo poner en práctica lo leído.
