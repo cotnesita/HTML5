@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Formulario
+        </title>
+        
+        <style>
+            body {
+                align-items: center;
+                background: url('https://verticalchimney.com/wp-content/uploads/2023/10/christmas-fireplace-ideas-1.png') no-repeat center center/cover;
+                display: flex;
+                font-family: Arial, sans-serif;
+                justify-content: center;  
+                margin: 0;
+                min-height: 100vh;
+                padding: 0;
+            }
+
+            h1 {
+                color: #333;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            form {
+                background: rgba(255, 255, 255, 0.9);
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                width: 300px;
+            }
+
+            label {
+                color: #555;
+                font-weight: bold;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input[type="color"],
+            input[type="email"],
+            input[type="number"],
+            input[type="text"] {             
+                border: 1px solid #cccc;
+                border-radius: 2px;
+                font-size: 14px;
+                height: 3em;
+                margin-bottom: 15px;
+                padding: 2px;
+                width: calc(100% - 10px);
+            }
+
+            input[type="submit"] {
+                background-color: #ff0000;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                cursor: pointer;
+                font-size: 16px;
+                padding: 10px;
+                width: 100%;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #b30f00;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h1>Registro de Usuario</h1>
+            <label 
+                for="name">Nombre:
+            </label>
+            <input
+                id="name" 
+                name="name"
+                placeholder="Escribe tu nombre" 
+                required
+                type="text" 
+            >
+            <br>
+            <br>
+
+            <label
+                for="email">Correo Electrónico:
+            </label>
+            <input 
+                id="email"
+                name="email"
+                placeholder="tuemail@dominio.com"
+                required
+                type="email"
+            >
+            <br>
+            <br>
+
+            <label
+                for="color">Color Favorito:
+            </label>
+            <input
+                id="color"
+                name="color"
+                type="color"
+            >
+            <br>
+            <br>
+
+            <label 
+                for="age">Edad:
+            </label>
+            <input
+                id="age"
+                max="99"
+                min="18"
+                name="age"
+                step="1" 
+                type="number"
+                value="25"
+            >
+            <br>
+            <br>
+
+            <input 
+                type="submit" 
+                value="Registrarse"
+            >
+        </form>
+    </body>
+</html>
