@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+            Información
+        </title>
+        <meta charset="utf-8">
+        <style>
+            /* Estilos generales */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f4f4f9;
+                color: #333;
+                font-weight: bold;
+            }
 
+            h1 {
+                color: #2a9d8f;
+                font-size: 2em;
+                border-bottom: 2px solid #2a9d8f;
+                padding-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+
+            span, time {
+                color: #3a6f83;
+            }
+
+            div[itemscope] {
+                background-color: #e9ecef;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Añadiendo estilo para br */
+            p br {
+                display: block;
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div 
+            itemscope 
+            itemtype="https://schema.org/Person"
+        >
+            <h1 itemprop="name">
+                Sobre mí
+            </h1>
+            <p>
+                Nacimiento (lugar y fecha)
+                <br>
+                <span itemprop="birthPlace">
+                    Hospital ABC
+                </span>
+                <br>
+                <time itemprop="birthDate">
+                    06/14/2006
+                </time>
+            </p>
+            <p>
+                Defunción (CP y motivo):
+                <br>
+                <span itemprop="deathPlace">
+                    52**4
+                </span>
+                <br>
+                <span itemprop="deathDate">
+                    Derrame cerebral
+                </span>
+            </p>
+            <p>
+                Características (sexo y ocupación):
+                <br>
+                <span itemprop="gender">
+                    Mujer
+                </span>
+                <br>
+                <span itemprop="hasOccupation">
+                    Técnico en Animación Digital
+                </span>
+            </p>
+        </div>
+    </body>
+</html>
