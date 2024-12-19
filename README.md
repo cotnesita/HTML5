@@ -17,4 +17,4 @@ El repositorio a continuación explorará y brindará resúmenes acerca de el li
 - [Capítulo 8-Vamos a dejar esto de lado](https://github.com/cotnesita/HTML5/tree/main/cap-08#cap%C3%ADtulo-8-vamos-a-dejar-esto-de-lado)
 - [Capítulo 9-Una forma de locura](https://github.com/cotnesita/HTML5/tree/main/cap-09#cap%C3%ADtulo-9-una-forma-de-locura)
 - [Capítulo 10-“Distribuido”, “extensibilidad” y otras palabras elegantes](https://github.com/cotnesita/HTML5/tree/main/cap-10#cap%C3%ADtulo-10-distribuido-extensibilidad-y-otras-palabras-elegantes)
-- [Capítulo 11-](url)
+- [Capítulo 11-Manipulando la historia para divertirse y obtener ganancias mostrar tabla de contenidos](https://github.com/cotnesita/HTML5/tree/main/cap-11#cap%C3%ADtulo-11-manipulando-la-historia-para-divertirse-y-obtener-ganancias-mostrar-tabla-de-contenidos)
