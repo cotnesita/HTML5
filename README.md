@@ -3,6 +3,7 @@
 #### Introducción
 
 El repositorio a continuación explorará y brindará resúmenes acerca de el libro titulado "HTML5", de los cuales se elaboraron ejemplos funcionales previamente revisados y probados para proporcionar una visualización gráfica y al mismo tiempo poner en práctica lo leído.
+
 La organización dentro de cada capítulo será de la siguiente manera: Archivo README.md dode irá el respectivo resumen. En caso de que el capítulo contenga un ejemplo se añadirá una carpeta nombrada "src" la cuál contendrá los archivos que se requirieron dentro del mismo así como una carpeta de evdencia para justificar el funcionamiento del respectivo ejemplo.
 
 #### Directorio
