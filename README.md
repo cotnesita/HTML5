@@ -2,7 +2,7 @@
 
 #### Introducción
 
-El repositorio a continuación explorará y brindará resúmenes acerca de el libro titulado "HTML5", de los cuales se elaboraron ejemplos funcionales previamente revisados y probados para una visualización gráfica y al mismo tempo poner en práctica lo leído.
+El repositorio a continuación explorará y brindará resúmenes acerca de el libro titulado "HTML5", de los cuales se elaboraron ejemplos funcionales previamente revisados y probados para proporcionar una visualización gráfica y al mismo tiempo poner en práctica lo leído.
 
 #### Directorio
 
