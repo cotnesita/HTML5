@@ -3,6 +3,7 @@
 #### Introducción
 
 El repositorio a continuación explorará y brindará resúmenes acerca de el libro titulado "HTML5", de los cuales se elaboraron ejemplos funcionales previamente revisados y probados para proporcionar una visualización gráfica y al mismo tiempo poner en práctica lo leído.
+La organización dentro de cada capítulo será de la siguiente manera: Archivo README.md dode irá el respectivo resumen. En caso de que el capítulo contenga un ejemplo se añadirá una carpeta nombrada "src" la cuál contendrá los archivos que se requirieron dentro del mismo así como una carpeta de evdencia para justificar el funcionamiento del respectivo ejemplo.
 
 #### Directorio
 
@@ -18,3 +19,6 @@ El repositorio a continuación explorará y brindará resúmenes acerca de el li
 - [Capítulo 9-Una forma de locura](https://github.com/cotnesita/HTML5/tree/main/cap-09#cap%C3%ADtulo-9-una-forma-de-locura)
 - [Capítulo 10-“Distribuido”, “extensibilidad” y otras palabras elegantes](https://github.com/cotnesita/HTML5/tree/main/cap-10#cap%C3%ADtulo-10-distribuido-extensibilidad-y-otras-palabras-elegantes)
 - [Capítulo 11-Manipulando la historia para divertirse y obtener ganancias mostrar tabla de contenidos](https://github.com/cotnesita/HTML5/tree/main/cap-11#cap%C3%ADtulo-11-manipulando-la-historia-para-divertirse-y-obtener-ganancias-mostrar-tabla-de-contenidos)
+
+#### Link del libro
+https://diveinto.html5doctor.com/
