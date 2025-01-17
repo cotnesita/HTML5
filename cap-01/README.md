@@ -14,7 +14,8 @@ Por ejemplo, cuando visitas una página web, el navegador recibe algo como:
 Esto le dice al navegador que lo que sigue es una página HTML. Otros tipos MIME pueden ser para imágenes `(image/jpeg, image/png)`, JavaScript `(application/javascript)`, o CSS `(text/css)`. Sin estos tipos, el navegador no sabría cómo manejar los archivos.
 
 <h3 style="color:#facdcd">2. Cómo se crean los estándares</h3>
- Las funciones que usamos en HTML, como la etiqueta `<img>` para imágenes, no aparecieron de la nada. Fueron propuestas por desarrolladores pioneros y discutidas en correos y foros abiertos. A través de esta colaboración, se crearon muchas de las etiquetas que hoy usamos, adaptándose con el tiempo a las necesidades de los usuarios.
+
+Las funciones que usamos en HTML, como la etiqueta `<img>` para imágenes, no aparecieron de la nada. Fueron propuestas por desarrolladores pioneros y discutidas en correos y foros abiertos. A través de esta colaboración, se crearon muchas de las etiquetas que hoy usamos, adaptándose con el tiempo a las necesidades de los usuarios.
 
  `<IMG SRC="file://foobar.com/foo/bar/blargh.xbm">`
 
