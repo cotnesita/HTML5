@@ -29,7 +29,11 @@ Cabe añadir, HTML5 solo maneja un tipo de estructura:
 `</head>` <br>
 `<body>`
 
-<h3 style="color:#b0f5ab">4. Está aquí para quedarse</h3>
+<h3 style="color:#b0f5ab">4. Ya funciona</h3>
+
+Muchas características de HTML5, como `<canvas>`, `<video>`, `geolocalización` y `almacenamiento local`, ya están soportadas en la mayoría de los navegadores modernos como *Chrome*, *Firefox*, *Safari*, y *Opera*. HTML5 está diseñado para funcionar incluso en navegadores antiguos mediante soluciones alternativas.
+
+<h3 style="color:#b3b9f5">5. Está aquí para quedarse</h3>
 
 Tim Berners-Lee inventó la World Wide Web a principios de la década de 1990. Más tarde fundó el W3C para actuar como administrador de los estándares web, lo que la organización ha hecho durante más de 15 años. Esto es lo que el W3C tenía que decir sobre el futuro de los estándares web, en julio de 2009:
 Hoy, el Director anuncia que cuando la carta del Grupo de Trabajo XHTML 2 expire según lo previsto a finales de 2009, la carta no se renovará. Al hacerlo, y al aumentar los recursos en el Grupo de Trabajo HTML, el W3C espera acelerar el progreso de HTML5 y aclarar la posición del W3C con respecto al futuro de HTML.
