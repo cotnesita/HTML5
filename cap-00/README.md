@@ -25,7 +25,7 @@ Cabe añadir, HTML5 solo maneja un tipo de estructura:
 `<!DOCTYPE html>` <br>
 `<html lang="en">` <br>
     `<head>` <br>
-    `    <title›HTML5: Arriba y Running</title>` <br>
+        `<title›HTML5: Arriba y Running</title>` <br>
     `</head>` <br>
     `<body>`
 
