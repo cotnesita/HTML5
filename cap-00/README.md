@@ -24,10 +24,10 @@ Cabe añadir, HTML5 solo maneja un tipo de estructura:
 
 `<!DOCTYPE html>` <br>
 `<html lang="en">` <br>
-`<head>` <br>
-    `<title›HTML5: Arriba y Running</title>` <br>
-`</head>` <br>
-`<body>`
+    `<head>` <br>
+    `    <title›HTML5: Arriba y Running</title>` <br>
+    `</head>` <br>
+    `<body>`
 
 <h3 style="color:#b0f5ab">4. Ya funciona</h3>
 
