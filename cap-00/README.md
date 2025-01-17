@@ -21,13 +21,16 @@ Es decir, HTML5 es compatible con HTML4. Las aplicaciones web creadas con HTML4 
 La actualización a HTML5 puede ser tan simple como cambiar el doctype en la primera línea de una página HTML. Esto no rompe el código antiguo, pero habilita el uso de nuevos elementos semánticos como `<article>`, `<header>`, `<footer>`, `<section>`.
 
 Cabe añadir, HTML5 solo maneja un tipo de estructura: 
-
-`<!DOCTYPE html>` <br>
-`<html lang="en">` <br>
-    `<head>` <br>
-        `<title›HTML5: Arriba y Running</title>` <br>
-    `</head>` <br>
-    `<body>`
+```html
+<!DOCTYPE html>
+<html> <lang="en">
+    <head>
+        <title›HTML5: Arriba y Running</title>
+    </head>
+    <body>
+    </body>
+</html>
+```
 
 <h3 style="color:#b0f5ab">4. Ya funciona</h3>
 
