@@ -1,4 +1,4 @@
-<center><h1>Capítulo 2: Detectando catracterísticas HTML5</h1></center>
+<center><h1>Capítulo 2: Detectando características HTML5</h1></center>
 
 ## Introducción
 El capítulo 2 titutlado "Detectando características HTML5" explica cómo asegurarse de que las páginas web funcionen correctamente en diferentes navegadores, ya que no todos admiten las nuevas características de HTML5. Es decir, en lugar de preguntar si un navegador es "compatible con HTML5", lo ideal es revisar si soporta funciones específicas, como reproducción de videos, dibujo en canvas o almacenamiento local. El contenido se enfoca en varias funcionalidades que HTML5 presenta y cómo verificar si están disponibles en el navegador.
