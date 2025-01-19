@@ -37,17 +37,17 @@ XHTML fue diseñado para manejar los errores de manera más rigurosa. Sin embarg
 
 <h3 style="color:#b3b9f5">5. Todo lo que sabes sobre XHTML es erróneo</h3>
 Como se mencionó anteriormente, a diferencia de HTML, donde los navegadores son indulgentes con los errores, XHTML requiere que los documentos sean "bien formados". Si hay un error, como olvidar cerrar una etiqueta, el navegador no mostrará la página. Un ejemplo de XHTML sería:
-
-`<!DOCTYPE html>` <br>
-`<html xmlns="http://www.w3.org/1999/xhtml">` <br>
-`<head>` <br>
-    `<title>Ejemplo de XHTML</title>` <br>
-`</head>` <br>
-`<body>` <br>
-    `<h1>Hola, mundo!</h1>` <br>
-`</body>` <br>
-`</html>`
-
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Ejemplo de XHTML</title>
+  </head>
+  <body>
+    <h1>Hola, mundo!</h1>
+  </body>
+</html>
+```
 Si este documento se sirve con el tipo MIME `application/xhtml+xml`, un error en la estructura provocará que el navegador muestre un mensaje de error en lugar de intentar mostrar el contenido.
 
 <h3 style="color:#db9e9e">6. Una visión competitiva</h3>
