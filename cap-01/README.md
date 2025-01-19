@@ -36,7 +36,9 @@ A diferencia de HTML, XHTML es mucho más estricto. En HTML puedes tener errores
 XHTML fue diseñado para manejar los errores de manera más rigurosa. Sin embargo, esta "rigidez" no fue bien recibida por muchos desarrolladores, quienes continuaron usando la versión tradicional de HTML, más flexible y tolerante con los errores.
 
 <h3 style="color:#b3b9f5">5. Todo lo que sabes sobre XHTML es erróneo</h3>
+
 Como se mencionó anteriormente, a diferencia de HTML, donde los navegadores son indulgentes con los errores, XHTML requiere que los documentos sean "bien formados". Si hay un error, como olvidar cerrar una etiqueta, el navegador no mostrará la página. Un ejemplo de XHTML sería:
+
 ```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
